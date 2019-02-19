@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
 
-  def new 
-    
-  end 
-  
+  def new
+
+  end
+
   def create
     if params[:name].nil? || params[:name] == ''
       redirect_to sessions_new_path
@@ -14,9 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete :name 
+    session.delete :name
     redirect_to sessions_new_path
   end 
-
-
 end
